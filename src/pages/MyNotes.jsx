@@ -53,7 +53,7 @@ const typeIcons = {
 };
 
 export default function EntriesPage() {
-  const [entries, setEntries] = useState<Entry[]>([]);
+  const [entries, setEntries] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filters, setFilters] = useState({
     type: "all",
@@ -63,13 +63,13 @@ export default function EntriesPage() {
   const [viewMode, setViewMode] = useState("grid"); // Can be 'grid' or 'list'
   const [isLoading, setIsLoading] = useState(true);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
-  const [editingEntry, setEditingEntry] = useState<Entry | null>(null);
+  const [editingEntry, setEditingEntry] = useState(null);
 
   const loadEntries = async () => {
     setIsLoading(true);
     // Simulate API call with mock data
     await new Promise(resolve => setTimeout(resolve, 800));
-    const mockEntries: Entry[] = [
+    const mockEntries = [
       { id: "1", title: "First Note on React", content: "This is a test note about React and JavaScript. It has some tags like #tech and #coding.", type: "note", tags: ["tech", "coding", "react"], createdAt: new Date("2023-01-15T10:00:00Z").toISOString() },
       { id: "2", title: "Idea for a new app", content: "A mobile app that tracks daily mood and provides insights.", type: "idea", tags: ["app-dev", "health", "innovation"], createdAt: new Date("2023-02-20T14:30:00Z").toISOString() },
       { id: "3", title: "Journal Entry: Day 1", content: "Started a new habit tracker today, feeling positive.", type: "journal", tags: ["habit", "self-improvement"], createdAt: new Date("2023-03-01T09:15:00Z").toISOString() },
@@ -95,7 +95,7 @@ export default function EntriesPage() {
     loadEntries();
   }, []);
 
-  const handleEdit = (entry: Entry) => {
+  const handleEdit = (entry) => {
     setEditingEntry(entry);
     setIsEditModalOpen(true);
   };

@@ -39,7 +39,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import MenuEditor from "./components/layout/MenuEditor";
+import MenuEditor from "@/components/layout/MenuEditor";
 
 // Navigation items for clients
 const clientNavigationItems = [
