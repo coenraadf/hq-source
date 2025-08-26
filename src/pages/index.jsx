@@ -230,7 +230,7 @@ const PAGES = {
     
     NotFound: NotFound,
     
-    404: 404,
+    Custom404: Custom404,
     
 }
 
