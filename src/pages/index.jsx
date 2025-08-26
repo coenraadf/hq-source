@@ -62,15 +62,7 @@ import PitchMarket from "./PitchMarket";
 
 import PitchInvestors from "./PitchInvestors";
 
-import PitchBeta from "./PitchBeta";
-
-import pitchvision from "./pitchvision";
-
-import pitchmarket from "./pitchmarket";
-
-import pitchinvestors from "./pitchinvestors";
-
-import pitchbeta from "./pitchbeta";
+import PitchBeta from "./pitchbeta";
 
 import pitchcontact from "./pitchcontact";
 
@@ -120,7 +112,7 @@ import BetaInvestorCircle from "./BetaInvestorCircle";
 
 import NotFound from "./NotFound";
 
-import 404 from "./404";
+import Custom404 from "./404";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
@@ -189,14 +181,6 @@ const PAGES = {
     PitchInvestors: PitchInvestors,
     
     PitchBeta: PitchBeta,
-    
-    pitchvision: pitchvision,
-    
-    pitchmarket: pitchmarket,
-    
-    pitchinvestors: pitchinvestors,
-    
-    pitchbeta: pitchbeta,
     
     pitchcontact: pitchcontact,
     
@@ -339,23 +323,15 @@ function PagesContent() {
                 
                 <Route path="/PitchBeta" element={<PitchBeta />} />
                 
-                <Route path="/pitchvision" element={<pitchvision />} />
+                <Route path="/PitchVision" element={<PitchVision />} />
                 
-                <Route path="/pitchmarket" element={<pitchmarket />} />
+                <Route path="/PitchMarket" element={<PitchMarket />} />
                 
-                <Route path="/pitchinvestors" element={<pitchinvestors />} />
+                <Route path="/PitchInvestors" element={<PitchInvestors />} />
                 
-                <Route path="/pitchbeta" element={<pitchbeta />} />
+                <Route path="/PitchBeta" element={<PitchBeta />} />
                 
                 <Route path="/pitchcontact" element={<pitchcontact />} />
-                
-                <Route path="/ProfileEditor" element={<ProfileEditor />} />
-                
-                <Route path="/Contact" element={<Contact />} />
-                
-                <Route path="/CoachContact" element={<CoachContact />} />
-                
-                <Route path="/CompassContact" element={<CompassContact />} />
                 
                 <Route path="/CompassFAQ" element={<CompassFAQ />} />
                 
@@ -395,7 +371,7 @@ function PagesContent() {
                 
                 <Route path="/NotFound" element={<NotFound />} />
                 
-                <Route path="/404" element={<404 />} />
+                <Route path="/404" element={<Custom404 />} />
                 
             </Routes>
         </Layout>
